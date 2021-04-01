@@ -15,14 +15,7 @@ import java.security.Principal;
 @Controller
 public class MessageController {
     @Autowired
-    private MessageRepository repository;
-
-    @Autowired
     private MessageService messageService;
-
-    public MessageController(MessageRepository repository) {
-        this.repository = repository;
-    }
 
     @GetMapping("/message")
     public String getMessagePage(Model model) {
